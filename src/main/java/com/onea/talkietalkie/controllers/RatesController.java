@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.onea.talkietalkie.model.Rates;
-import com.onea.talkietalkie.model.TechTalk;
 import com.onea.talkietalkie.repository.RatesRepository;
 
 
@@ -41,12 +40,6 @@ class RatesController {
 			.orElseThrow(() -> new NotFoundException(idRate));
 	}
 	
-	@GetMapping("/talk/{id}/user/{id}/rate/{id}")
-	TechTalk listTalkUserRate(@PathVariable Long idTalk, @PathVariable Long idUser, @PathVariable Long idRate) {
-
-		return repository.findById(id)
-			.orElseThrow(() -> new NotFoundException(id));
-	}
 
 	@PutMapping("/updateRate/{id}")
 	Rates updateRate(@RequestBody Rates newRate, @PathVariable Long idRate) {
