@@ -2,16 +2,23 @@ package com.onea.talkietalkie.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
-public @Data class TechTalk {
+@Data
+@Table(name="tech_talk")
+public class TechTalk {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
-    public Integer presenterId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "presenter_id")
+    private Presenter presenter;
+    @Column(name = "title")
     public String Title;
-    public Date talkDate;
+    @Column(name="talk_date")
+    public Timestamp talkDate;
 
 }
