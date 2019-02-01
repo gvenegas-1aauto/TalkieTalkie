@@ -41,11 +41,11 @@ class RatesController {
 			.orElseThrow(() -> new NotFoundException(idRate));
 	}
 	
-	@GetMapping("/talk/{id}/user/{id}/rate/{id}")
-	TechTalk listTalkUserRate(@PathVariable Long idTalk, @PathVariable Long idUser, @PathVariable Long idRate) {
+	@GetMapping("/talk/{idTalk}/user/{idUser}/rate/{idRate}")
+	Rates listTalkUserRate(@PathVariable Long idTalk, @PathVariable Long idUser, @PathVariable Long idRate) {
 
-		return repository.findById(id)
-			.orElseThrow(() -> new NotFoundException(id));
+		return repository.findById(idTalk)
+			.orElseThrow(() -> new NotFoundException(idTalk));
 	}
 
 	@PutMapping("/updateRate/{id}")
