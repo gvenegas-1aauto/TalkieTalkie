@@ -27,6 +27,6 @@ public class TechTalkResourceAssembler extends ResourceAssemblerSupport<TechTalk
 		resource.add(presenterRelLink);
 		return resource;
 	}
-	
-
+		
 }
+

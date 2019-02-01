@@ -1,8 +1,9 @@
 package com.onea.talkietalkie.controller;
 
-class NotFoundException extends RuntimeException {
+public class NotFoundException extends RuntimeException {
+	private static final long serialVersionUID = 920395762323404896L;
 
-	NotFoundException(Long id) {
+	public NotFoundException(Long id) {
 		super("Could not find " + id);
 	}
 }
