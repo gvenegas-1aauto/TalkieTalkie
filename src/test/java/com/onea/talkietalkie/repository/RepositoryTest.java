@@ -24,10 +24,4 @@ public class RepositoryTest {
     public void getAllPresentersTest() throws Exception {
         presenterRepo.findAll();
     }
-
-//    @Test
-//    public void getPresenterByIdTest() throws Exception {
-//        Optional<Presenter> presenter =  presenterRepo.findById(1l);
-//        Assert.assertFalse(presenter.isPresent());
-//    }
 }
