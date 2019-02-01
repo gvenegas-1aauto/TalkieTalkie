@@ -19,7 +19,7 @@ addons:
 before_script:
 - mysql -u root -e 'CREATE DATABASE oneatalks;'
 - mysql -u root -e "CREATE USER 'springuser'@'127.0.0.1' IDENTIFIED BY 'ThePassword';"
-- mysql -u root -e "GRANT ALL ON oneatalks.* TO 'springuser'@'localhost';"
+- mysql -u root -e "GRANT ALL ON oneatalks.* TO 'springuser'@'127.0.0.1';"
 
 script: mvn clean verify
 
