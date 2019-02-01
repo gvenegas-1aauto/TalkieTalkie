@@ -1,4 +1,4 @@
-package com.onea.talkietalkie.controllers;
+package com.onea.talkietalkie.controller;
 
 import java.util.List;
 

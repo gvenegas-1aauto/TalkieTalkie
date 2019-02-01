@@ -1,4 +1,4 @@
-package com.onea.talkietalkie.controllers;
+package com.onea.talkietalkie.controller;
 
 class NotFoundException extends RuntimeException {
 
