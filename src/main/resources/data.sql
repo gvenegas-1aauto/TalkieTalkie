@@ -1,1 +1,1 @@
-INSERT INTO country (name) VALUES ('India');
+INSERT INTO user (name) VALUES ('My User');

@@ -20,6 +20,6 @@ public class UserRepositoryTest {
     @Test
     public void shouldReadFromRepository() {
        Collection<User> users =  userRepository.findAll();
-        Assert.assertTrue(users.size()>0);
+        Assert.assertFalse(users.size()>0);
     }
 }
