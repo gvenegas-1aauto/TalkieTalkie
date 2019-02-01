@@ -39,7 +39,6 @@ class RatesController {
 		return repository.findById(idRate)
 			.orElseThrow(() -> new NotFoundException(idRate));
 	}
-	
 
 	@PutMapping("/updateRate/{id}")
 	Rates updateRate(@RequestBody Rates newRate, @PathVariable Long idRate) {

@@ -1,5 +1,23 @@
+before_install:
+  - chmod +x mvnw
 language: java
+jdk:
+  - oraclejdk8
 sudo: false
+
+addons:
+  apt:
+    packages:
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6
+
+before_script:
+- mysql -u root -e 'CREATE DATABASE oneatalks;'
+- mysql -u root -e "CREATE USER 'springuser'@'localhost' IDENTIFIED BY 'ThePassword';"
+- mysql -u root -e "GRANT ALL ON oneatalks.* TO 'springuser'@'localhost';"
+
+script: mvn clean verify
 
 after_success:
    - bash <(curl -s https://codecov.io/bash)
