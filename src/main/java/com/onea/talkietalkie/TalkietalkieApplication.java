@@ -22,7 +22,7 @@ public class TalkietalkieApplication {
 
 	    @Override
 	    protected void configure(HttpSecurity http) throws Exception {
-	        http.csrf().disable().authorizeRequests().antMatchers("/secured/resource/test").authenticated()
+	        http.csrf().disable().authorizeRequests().antMatchers("/index").authenticated()
 	                .and().exceptionHandling();
 	        http.formLogin().failureUrl("/login?error").defaultSuccessUrl("/").loginPage("/login").permitAll().and()
 	                .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login")
