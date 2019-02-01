@@ -6,7 +6,7 @@ import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 import org.springframework.stereotype.Component;
 
 import com.onea.talkietalkie.controller.PresenterController;
-import com.onea.talkietalkie.controllers.TechTalkController;
+import com.onea.talkietalkie.controller.TechTalkController;
 import com.onea.talkietalkie.model.TechTalk;
 import com.onea.talkietalkie.resource.Relations;
 import com.onea.talkietalkie.resource.TechTalkResource;
