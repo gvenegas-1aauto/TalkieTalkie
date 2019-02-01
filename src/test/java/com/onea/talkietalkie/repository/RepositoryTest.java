@@ -14,7 +14,6 @@ import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@TestPropertySource("classpath:development-test.properties")
 @AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
 public class RepositoryTest {
     @Autowired
