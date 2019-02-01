@@ -3,16 +3,13 @@ before_install:
 language: java
 jdk:
   - oraclejdk8
-
 branches:
   only:
   - master
 services:
-- mysql
+  - mysql
 dist: trusty
-
 sudo: required
-
 addons:
   apt:
     packages:
@@ -22,10 +19,11 @@ addons:
 
 before_script:
 - mysql -u root -e 'CREATE DATABASE oneatalks;'
-- mysql -u root -e "CREATE USER 'springuser'@'127.0.0.1' IDENTIFIED BY 'ThePassword';"
-- mysql -u root -e "GRANT ALL ON oneatalks.* TO 'springuser'@'127.0.0.1';"
+- mysql -u root -e "CREATE USER 'springuser'@'localhost' IDENTIFIED BY 'ThePassword';"
+- mysql -u root -e "GRANT ALL ON oneatalks.* TO 'springuser'@'localhost';"
 
 script: mvn clean verify
-
 after_success:
-   - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
+notifications:
+email: false
